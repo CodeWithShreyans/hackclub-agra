@@ -11,7 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CountdownTimer } from "@/components/countdown-timer";
 
-export default function DarkModeCounterspellHackathon() {
+export default function Home() {
     // const [isHovered, setIsHovered] = useState(false);
     const targetDate = "2024-11-24T06:30:00Z"; // 12 PM IST on 24 November 2024
 
@@ -28,32 +28,39 @@ export default function DarkModeCounterspellHackathon() {
                     />
                 </Link>
             </div>
-            <div className="container mx-auto px-4 py-16">
-                <header className="mb-10 flex flex-col items-center gap-4 text-center">
-                    <h1 className="w-fit justify-center bg-gradient-to-r from-[#ec3750] to-[#ff8c37] bg-clip-text text-center text-6xl font-extrabold text-transparent">
-                        Counterspell Agra
-                    </h1>
-                    <p className="text-2xl text-muted-foreground">
-                        Hack Club&apos;s Beginner Friendly Game Jam
-                        <br />
-                        in the City of Taj
-                    </p>
-                    <Button size="lg" variant="secondary">
-                        Register Now
-                    </Button>
-                </header>
+            <div className="container mx-auto flex flex-col gap-10 px-4 pb-10">
+                <div className="flex min-h-screen flex-col justify-evenly">
+                    <header className="flex flex-col items-center gap-6 text-center">
+                        <div className="flex flex-col">
+                            <h1 className="h-fit w-fit justify-center bg-gradient-to-r from-[#ec3750] to-[#ff8c37] bg-clip-text text-center text-8xl font-extrabold leading-relaxed text-transparent">
+                                Counterspell Agra
+                            </h1>
+                            <p className="font-mono text-3xl leading-normal tracking-wide text-muted-foreground">
+                                Hack Club&apos;s Beginner Friendly Game Jam
+                                <br />
+                                In the City of Taj
+                            </p>
+                        </div>
+                        <Button
+                            className="h-12 rounded-md px-9 text-lg"
+                            variant="secondary"
+                        >
+                            Register Now
+                        </Button>
+                    </header>
 
-                <section className="mb-20">
-                    <h2 className="mb-6 text-center text-3xl font-bold">
-                        Countdown to Hackathon
-                    </h2>
-                    <CountdownTimer targetDate={targetDate} />
-                </section>
+                    <section className="flex flex-col gap-4">
+                        <h2 className="text-center text-3xl font-bold">
+                            Countdown to Hackathon
+                        </h2>
+                        <CountdownTimer targetDate={targetDate} />
+                    </section>
+                </div>
 
-                <Separator className="my-10" />
+                <Separator />
 
-                <section className="mb-20">
-                    <h2 className="mb-6 text-3xl font-bold">FAQ</h2>
+                <section className="flex flex-col gap-4 pb-12 pt-10">
+                    <h2 className="text-3xl font-bold">FAQ</h2>
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger>
@@ -146,7 +153,8 @@ export default function DarkModeCounterspellHackathon() {
                                     >
                                         Hack Club Workshops
                                     </Link>
-                                </Button>{" "}
+                                </Button>
+                                .
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-5">
@@ -192,9 +200,9 @@ export default function DarkModeCounterspellHackathon() {
                     </Accordion>
                 </section>
 
-                <Separator className="my-10 bg-gray-700" />
+                <Separator />
 
-                <section className="mb-20">
+                {/* <section className="mb-20">
                     <h2 className="mb-6 text-3xl font-bold">Sponsors</h2>
                     <ul className="grid grid-cols-2 gap-4 text-lg md:grid-cols-4">
                         <li className="flex items-center">
@@ -210,20 +218,18 @@ export default function DarkModeCounterspellHackathon() {
                             <Users className="mr-2" /> TBA
                         </li>
                     </ul>
-                </section>
+                </section> */}
 
                 <footer className="text-center">
-                    <div className="mb-8 flex justify-center space-x-4">
+                    {/* <div className="mb-8 flex justify-center space-x-4">
                         <Button variant="outline" className="">
                             Contact Us
                         </Button>
                         <Button variant="outline" className="">
                             Sponsor Us
                         </Button>
-                    </div>
-                    <p className="text-sm">
-                        &copy; 2024 Shreyans Jain. All rights reserved.
-                    </p>
+                    </div> */}
+                    <p className="text-sm">&copy; 2024 Shreyans Jain</p>
                 </footer>
             </div>
         </div>
